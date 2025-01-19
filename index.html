@@ -338,9 +338,8 @@ mjx-container[display="true"] + br {
                             
 Ver 1.4.4.9
 
-高级运动的编写过程就像描点画出函数的图像。需要先在屏幕上描出一系列点，随后让速度向量全部指向这些点。
-以下为完整代码
-1234567891011121314151617181920212223242526272829303...
+要做到正弦曲线的运动形式，首先可以将一段曲线运动化为数段直线运动。如上图，以及等表示每一帧弹幕的运动向量Projectile.Velocity。现在的问题就是通过数学变换把它们表示出来。
+左上角表示泰拉直角坐标系原点，这些...
                         
                     </div>
 
@@ -351,8 +350,8 @@ Ver 1.4.4.9
         
             <span class="meta-info-item border-box">
                 <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Sun Jan 19 2025 19:11:13 GMT+0800"
-                >2025-01-19 19:11:13</span>
+                                                                                data-updated="Sun Jan 19 2025 20:05:10 GMT+0800"
+                >2025-01-19 20:05:10</span>
             </span>
         
 
@@ -815,38 +814,9 @@ EFCloud
     </div>
 
     <!-- image mask -->
-    .zoom-in-image-mask {
-  position fixed
-  top 0
-  right 0
-  bottom 0
-  left 0
-  z-index $z-index-8
-  display flex
-  align-items center
-  justify-content center
-  box-sizing border-box
-  background rgba(0, 0, 0, 0)
-  visibility hidden
-  transition-t("visibility, background", "0, 0", "0.3, 0.3", "linear, linear")
-
-  &.show {
-    background rgba(0, 0, 0, 0.5)
-    visibility visible
-
-    .zoom-in-image {
-      cursor zoom-out
-    }
-  }
-
-  .zoom-in-image {
-    position absolute
-    z-index $z-index-9
-    transform-origin center center
-    will-change transform
-    transition-t("transform", "0", "0.3", "linear")
-  }
-}
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
 
 
     <!-- local search -->
