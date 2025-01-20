@@ -9,7 +9,7 @@
     
     <title>
         
-            [Tmodloader] 圆周运动 |
+            [Tmodloader] 绕点圆周运动 |
         
         #CloudE
     </title>
@@ -328,7 +328,7 @@ mjx-container[display="true"] + br {
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        [Tmodloader] 圆周运动
+                        [Tmodloader] 绕点圆周运动
                     </div>
                 
 
@@ -362,7 +362,7 @@ mjx-container[display="true"] + br {
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Sun Jan 19 2025 23:35:00 GMT+0800">2025-01-19 23:35:00</span>
+                    <span class="datetime" data-updated="Mon Jan 20 2025 15:28:20 GMT+0800">2025-01-20 15:28:20</span>
                 </span>
             
         
@@ -405,8 +405,11 @@ mjx-container[display="true"] + br {
                          <ul>
 <li>Ver 1.4.4.9</li>
 </ul>
-<p><img lazyload="" alt="image" data-src="https://cdn.jsdelivr.net/gh/Inftys/PicGo@main/2025-01/GIF%202025-1-19%2022-42-35.gif"></p>
-
+<p>废话不多说，先上图<br><img lazyload="" alt="image" data-src="https://cdn.jsdelivr.net/gh/Inftys/PicGo@main/2025-01/GIF%202025-1-19%2022-42-35.gif"><br>要想实现圆周运动，首先要明确弹幕的生成位置。由上面的动图不难看出，我们在第一帧先让弹幕按<code>new Vecotor(range， 0)</code>运动，随后再进行绕圈运动的。</p>
+<p>根据<a class="link" target="_blank" rel="noopener" href="https://inftys.cn/2025/01/19/%E6%AD%A3%E5%BC%A6%E8%BF%90%E5%8A%A8/">上一章<i class="fas fa-external-link-alt"></i></a>的内容，直接上原理图。</p>
+<p><img lazyload="" alt="image" data-src="https://cdn.jsdelivr.net/gh/Inftys/PicGo@main/2025-01/20250120152111899.png"></p>
+<p>这个是相关代码，可以辅助理解。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Player player =&gt; Main.player[Projectile.owner];</span><br><span class="line"><span class="built_in">float</span> timer = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">timer++;</span><br><span class="line"><span class="built_in">float</span> rad = timer * <span class="number">0.01f</span>; <span class="comment">// 每帧转过的弧度</span></span><br><span class="line"><span class="built_in">float</span> range = <span class="number">300f</span>; <span class="comment">// 半径</span></span><br><span class="line">Vector2 RotVel = rad.ToRotationVector2() * range; <span class="comment">// 将弧度转换为对应方向的单位向量，从x正半轴顺时针出发</span></span><br><span class="line">Projectile.velocity = player.Center + RotVel - Projectile.Center; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
                     
                 </div>
 
