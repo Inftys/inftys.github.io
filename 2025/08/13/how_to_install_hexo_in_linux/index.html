@@ -111,7 +111,7 @@ Node.js 安装此步骤参考网上教程，用此检查是否已安装
 <h2 id="Git-安装及授权"><a href="#Git-安装及授权" class="headerlink" title="Git 安装及授权"></a>Git 安装及授权</h2><p>安装教程省略，用此检查是否已安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install -y git</span><br><span class="line">git -v</span><br></pre></td></tr></table></figure>
 <p>安装完记得给Git配置好Github账户的密钥，使用<code>ssh -T git@github.com</code>查看授权情况</p>
-<p><code>注意事项：</code>如果出现<code>无法自动探测邮件地址</code>以及<code>Permission denied</code>这类问题，确保<code>~/.ssh</code>相关文件拥有对应权限。</p>
+<p><code>注意事项：</code>如果出现<code>无法自动探测邮件地址</code>以及<code>Permission denied</code>这类问题，确保<code>~/.ssh</code>相关文件拥有对应权限。获取密钥时不要用<code>sudo</code>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 700 ~/.ssh</span><br><span class="line"><span class="built_in">chmod</span> 600 ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
 <p>以及避免将Hexo博客主体安装于<code>/opt</code>等位置，否则Hexo将没有足够的权限进行文件的修改。</p>
 <h2 id="npm-安装"><a href="#npm-安装" class="headerlink" title="npm 安装"></a>npm 安装</h2><p>同上</p>
@@ -141,7 +141,7 @@ Node.js 安装此步骤参考网上教程，用此检查是否已安装
 
     
       <div class="next-post">
-        <a class="purple-link" href="/2025/08/12/hello-world/">
+        <a class="purple-link" href="/2025/08/12/hello_world/">
           <h3 class="post-title">
             
             Next post: 关于本站
