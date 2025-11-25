@@ -12,7 +12,7 @@
 <title>Leetcode</title>
 <meta name="keywords" content="Leetcode, JellyFish">
 <meta name="description" content="LeetCode：1018. 可被 5 整除的二进制前缀
-对我来说，这道题是位运算+同余原理应用的好题，直接用公式pow()硬算的化会导致耗时，并且nums元素很多时会直接溢出。参考答案给了一种耗时很小且不会溢出的解法。
+对我来说，这道题是位运算+同余原理应用的好题，直接用公式pow()硬算的话会导致耗时，并且nums元素很多时会直接溢出。参考答案给了一种耗时很小且不会溢出的解法。
 
 12//利用位运">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,7 +20,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="Leetcode">
 <meta property="og:description" content="LeetCode：1018. 可被 5 整除的二进制前缀
-对我来说，这道题是位运算+同余原理应用的好题，直接用公式pow()硬算的化会导致耗时，并且nums元素很多时会直接溢出。参考答案给了一种耗时很小且不会溢出的解法。
+对我来说，这道题是位运算+同余原理应用的好题，直接用公式pow()硬算的话会导致耗时，并且nums元素很多时会直接溢出。参考答案给了一种耗时很小且不会溢出的解法。
 
 12//利用位运">
 
@@ -100,7 +100,7 @@
       <div class="post-content-wrapper">
         <div class="post-content">
           <h2 id="LeetCode：1018-可被-5-整除的二进制前缀"><a href="#LeetCode：1018-可被-5-整除的二进制前缀" class="headerlink" title="LeetCode：1018. 可被 5 整除的二进制前缀"></a>LeetCode：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-prefix-divisible-by-5/">1018. 可被 5 整除的二进制前缀</a></h2><blockquote>
-<p>对我来说，这道题是位运算+同余原理应用的好题，直接用公式<code>pow()</code>硬算的化会导致耗时，并且<code>nums</code>元素很多时会直接溢出。参考答案给了一种耗时很小且不会溢出的解法。</p>
+<p>对我来说，这道题是位运算+同余原理应用的好题，直接用公式<code>pow()</code>硬算的话会导致耗时，并且<code>nums</code>元素很多时会直接溢出。参考答案给了一种耗时很小且不会溢出的解法。</p>
 </blockquote>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//利用位运算和同余原理</span></span><br><span class="line">prefix = ((prefix &lt;&lt; <span class="number">1</span>) + nums[i]) % <span class="number">5</span></span><br></pre></td></tr></table></figure>
 
@@ -120,10 +120,14 @@
 <td>(a * 2 + c) % m</td>
 </tr>
 </tbody></table>
-<p>由求余原理得<code>(a * 2 + c) % m = (a % m * 2 % m + c % m) % m</code></p>
-<p>又因为<code>2 % m = 2</code>，<code>c % m = c</code></p>
-<p>所以<code>(a * 2 + c) % m = ((a % m) * 2) + c) % m</code></p>
+<p>由求余原理得</p>
+<p><code>(a * 2 + c) % m = (a % m * 2 % m + c % m) % m</code></p>
+<p>又因为</p>
+<p><code>2 % m = 2</code>，<code>c % m = c</code></p>
+<p>所以</p>
+<p><code>(a * 2 + c) % m = ((a % m) * 2) + c) % m</code></p>
 <p>我们得到两个相邻余数之间的关系，<code>prefix = (prefix * 2 + c) % m</code>得证。</p>
+<p>$$\sin \alpha + \sin \beta &#x3D;2 \sin \frac{\alpha + \beta}{2}\cos \frac{\alpha - \beta}{2}$$</p>
 
         </div>
           
