@@ -9,8 +9,8 @@
 
 <meta charset="utf-8" >
 
-<title>Leetcode</title>
-<meta name="keywords" content="Leetcode, JellyFish">
+<title>Leetcode每日一题</title>
+<meta name="keywords" content="Leetcode每日一题, JellyFish">
 <meta name="description" content="LeetCode：1018. 可被 5 整除的二进制前缀
 对我来说，这道题是位运算+同余原理应用的好题，直接用公式pow()硬算的话会导致耗时，并且nums元素很多时会直接溢出。参考答案给了一种耗时很小且不会溢出的解法。
 
@@ -18,7 +18,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="Leetcode">
+<meta property="og:title" content="Leetcode每日一题">
 <meta property="og:description" content="LeetCode：1018. 可被 5 整除的二进制前缀
 对我来说，这道题是位运算+同余原理应用的好题，直接用公式pow()硬算的话会导致耗时，并且nums元素很多时会直接溢出。参考答案给了一种耗时很小且不会溢出的解法。
 
@@ -82,7 +82,7 @@
   <div class="content-container">
     <div class="post-detail">
       
-      <h2 class="post-title">Leetcode</h2>
+      <h2 class="post-title">Leetcode每日一题</h2>
       <div class="post-info post-detail-info">
         <span><i class="icon icon-calendar-outline"></i> 2025-11-24</span>
         
@@ -121,14 +121,13 @@
 </tr>
 </tbody></table>
 <p>由求余原理得</p>
-<p><code>(a * 2 + c) % m = (a % m * 2 % m + c % m) % m</code></p>
+<p><code>(a*2 + c) % m = (a%m * 2%m + c%m) % m</code></p>
 <p>又因为</p>
 <p><code>2 % m = 2</code>，<code>c % m = c</code></p>
 <p>所以</p>
-<p><code>(a * 2 + c) % m = ((a % m) * 2) + c) % m</code></p>
-<p>我们得到两个相邻余数之间的关系，<code>prefix = (prefix * 2 + c) % m</code>得证。</p>
-<p>$$\sin \alpha + \sin \beta &#x3D;2 \sin \frac{\alpha + \beta}{2}\cos \frac{\alpha - \beta}{2}$$</p>
-
+<p><code>(a*2 + c) % m = ((a%m) * 2) + c) % m</code></p>
+<p>我们得到两个相邻余数之间的关系，<code>prefix = (prefix*2 + c) % m</code>得证。</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
         </div>
           
         <div class="top-div">
