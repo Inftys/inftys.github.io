@@ -11,14 +11,14 @@
 
 <title>ArchLinux使用過程中的問題及解決方案</title>
 <meta name="keywords" content="ArchLinux使用過程中的問題及解決方案, Hexo">
-<meta name="description" content="代理AUR仓库连接在有些情况下，就算代理后台挂着代理，终端不一定会读取全局配置。以Fish为例，需要在~/.config/fish/config.fish进行单独代理配置。
-12set -gx HTTP_PROXY http://127.0">
+<meta name="description" content="代理AUR仓库连接在有些情况下，就算后台挂着代理，终端不一定会读取全局配置。以Fish为例，需要在~/.config/fish/config.fish进行单独代理配置。
+12set -gx HTTP_PROXY http://127.0.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="ArchLinux使用過程中的問題及解決方案">
-<meta property="og:description" content="代理AUR仓库连接在有些情况下，就算代理后台挂着代理，终端不一定会读取全局配置。以Fish为例，需要在~/.config/fish/config.fish进行单独代理配置。
-12set -gx HTTP_PROXY http://127.0">
+<meta property="og:description" content="代理AUR仓库连接在有些情况下，就算后台挂着代理，终端不一定会读取全局配置。以Fish为例，需要在~/.config/fish/config.fish进行单独代理配置。
+12set -gx HTTP_PROXY http://127.0.0">
 
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="stylesheet" href="/style/main.css">
@@ -95,7 +95,7 @@
       </div>
       <div class="post-content-wrapper">
         <div class="post-content">
-          <h1 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h1><h2 id="AUR仓库连接"><a href="#AUR仓库连接" class="headerlink" title="AUR仓库连接"></a>AUR仓库连接</h2><p>在有些情况下，就算代理后台挂着代理，终端不一定会读取全局配置。以<code>Fish</code>为例，需要在<code>~/.config/fish/config.fish</code>进行单独代理配置。</p>
+          <h1 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h1><h2 id="AUR仓库连接"><a href="#AUR仓库连接" class="headerlink" title="AUR仓库连接"></a>AUR仓库连接</h2><p>在有些情况下，就算后台挂着代理，终端不一定会读取全局配置。以<code>Fish</code>为例，需要在<code>~/.config/fish/config.fish</code>进行单独代理配置。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set -gx HTTP_PROXY http://127.0.0.1:7897</span><br><span class="line">set -gx HTTPS_PROXY http://127.0.0.1:7897</span><br></pre></td></tr></table></figure>
 
 <p><code>7897</code>对应代理端口号。</p>
