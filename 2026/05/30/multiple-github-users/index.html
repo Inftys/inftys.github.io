@@ -5,16 +5,18 @@
 
 <meta charset="utf-8" >
 
-<title>multiple-github-users</title>
-<meta name="keywords" content="multiple-github-users, Infinite Space">
-<meta name="description" content="">
+<title>同一设备配置多个Github账户</title>
+<meta name="keywords" content="同一设备配置多个Github账户, Infinite Space">
+<meta name="description" content="首先，本文档默认已经配置完了一个账户user1。然后生成第二个SSH，起别名id_rsa_sec（可修改成其他名称）。
+在对应目录位置下新建一个config文件。以Arch Linux为例，文件位置为~/.ssh/config，填入一下内容">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="multiple-github-users">
-<meta property="og:description" content="">
+<meta property="og:title" content="同一设备配置多个Github账户">
+<meta property="og:description" content="首先，本文档默认已经配置完了一个账户user1。然后生成第二个SSH，起别名id_rsa_sec（可修改成其他名称）。
+在对应目录位置下新建一个config文件。以Arch Linux为例，文件位置为~/.ssh/config，填入一下内容">
 
-<link rel="shortcut icon" href="/images/infinite.ico">
+<link rel="shortcut icon" href="/images/avatar.jpg">
 <link rel="stylesheet" href="/style/main.css">
 
   <meta name="generator" content="Hexo 7.3.0"></head>
@@ -72,14 +74,26 @@
   <div class="content-container">
     <div class="post-detail">
       
-      <h2 class="post-title">multiple-github-users</h2>
+      <h2 class="post-title">同一设备配置多个Github账户</h2>
       <div class="post-info post-detail-info">
         <span><i class="icon icon-calendar-outline"></i> 2026-05-30</span>
+        
+          <span>
+          <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="/tags/github-ssh/">
+              github ssh
+                
+              </a>
+            
+          </span>
         
       </div>
       <div class="post-content-wrapper">
         <div class="post-content">
-          
+          <p>首先，本文档默认已经配置完了一个账户<code>user1</code>。然后生成第二个<code>SSH</code>，起别名<code>id_rsa_sec</code>（可修改成其他名称）。</p>
+<p>在对应目录位置下新建一个<code>config</code>文件。以Arch Linux为例，文件位置为<code>~/.ssh/config</code>，填入一下内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host sec-github</span><br><span class="line">  HostName github.com</span><br><span class="line">  User git</span><br><span class="line">  IdentityFile ~/.ssh/id_rsa_sec</span><br></pre></td></tr></table></figure>
         </div>
           
         <div class="top-div">
@@ -150,7 +164,7 @@
       </div>
     </div>
     
-<script id="hexo-configurations"> window.theme_config = {"image":{"lazyload_enable":true,"lazyload_placeholder":null,"photo_zoom":"simple-lightbox"},"search":{"enable":false,"type":"algolia","placeholder":"输入关键词搜索...","algolia":{"appID":"","apiKey":"","indexName":""}},"language":"zh_CN"}; window.is_post = true; </script>
+<script id="hexo-configurations"> window.theme_config = {"image":{"lazyload_enable":true,"lazyload_placeholder":null,"photo_zoom":"simple-lightbox"},"search":{"enable":true,"type":"algolia","placeholder":"输入关键词搜索...","algolia":{"appID":"","apiKey":"","indexName":""}},"language":"zh_CN"}; window.is_post = true; </script>
 
 <script src="/js/main.js"></script>
 
